@@ -1,9 +1,13 @@
-// Power of a number using Binary Exponentiation ( excluding negative exps )
+// Power of a number using Modified Binary Exponentiation
 #include <iostream>
 
-long long power(int base, int exp)
+long double power(int base, int exp)
 {
-    long long res = 1;
+    long double res = 1;
+    bool neg = (exp < 0) ? true : false;
+    if (neg)
+        exp *= -1;
+
     while (exp > 0)
     {
         if (exp & 1)
@@ -14,19 +18,20 @@ long long power(int base, int exp)
         base *= base;
         exp >>= 1;
     }
-    return res;
+    if (!neg)
+        return res;
+    else
+        return 1 / res;
 }
 
 int main()
 {
     int base = 0, exp = 0;
-    std::cout<<"Enter base: ";
-    std::cin>>base;
-    std::cout<<"Enter exponent: ";
-    std::cin>>exp;
-    std::cout<<"The res is :"<<power(base,exp)<<std::endl;
+    std::cout << "Enter base: ";
+    std::cin >> base;
+    std::cout << "Enter exponent: ";
+    std::cin >> exp;
+    std::cout << "The res is : " << power(base, exp) << std::endl;
 
     return 0;
 }
-
-
