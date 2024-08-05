@@ -3,4 +3,5 @@
 [2.](swap.cpp) Swaps two numbers using xor\
 [3.](reverse.cpp) Reverses a string\
 [4.](powerbinexp.cpp) Finds power of a number using binary exponentiation\
-[5.](armstrong.cpp) Check if a number is Armstrong or not
+[5.](armstrong.cpp) Check if a number is Armstrong or not\
+[6.](HcfLcm.cpp) Finds HCG ( GCD ) and LCM of two numbers
