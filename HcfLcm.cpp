@@ -45,4 +45,6 @@ int main()
     std::cin >> num2;
     std::cout << "The HCF is : " << findHCF(num1, num2) << std::endl;
     std::cout << "The LCM is : " << findLCM(num1, num2) << std::endl;
+
+    return 0;
 }
